@@ -1,0 +1,15 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Nutrifacts",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "/index.html",
+    "short_name": "NF",
+    "theme_color": "#f27b00",
+    "description": "",
+    "orientation": "any",
+    "background_color": "#3a1c8d",
+    "related_applications": [],
+    "prefer_related_applications": false
+}
