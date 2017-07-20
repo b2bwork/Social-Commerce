@@ -1,0 +1,35 @@
+<div *ngIf="!loading">
+  <div *ngFor="let list of listCategorys.listCategory" style="margin-top: 5%">
+    <div class="col-sm-6 col-md-3 w3-animate-right " data-toggle="modal" data-target="#myModal">
+      <div class="thumbnail image shadow">
+        <img [src]="list.Image" style="width:98%; height:250px">
+        <div class="caption">
+          <h1>{{list.Name}}</h1>
+        </div>
+       </div>
+      </div>
+  </div>
+</div> 
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">สมัครสมาชิก</h4>
+      </div>
+      <div class="modal-body">
+        <a class="btn btn-block btn-social btn-facebook" >
+            <span class="fa fa-facebook"></span> เข้าสู่ระบบด้วย Facebook
+          </a>
+          <br>
+          <a class="btn btn-block btn-social btn-google" (click)="authGoogle()" data-dismiss="modal">
+            <span class="fa fa-google"></span> เข้าสู่ระบบด้วย Google
+          </a>
+          <br>
+      </div>
+    </div>
+
+  </div>
+</div>
+    

@@ -1,9 +1,12 @@
+import { ListcategorysComponent } from './../listcategorys/listcategorys.component';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-index-category',
   templateUrl: './index-category.component.html',
-  styleUrls: ['./index-category.component.css']
+  styleUrls: ['./index-category.component.css'],
+  entryComponents: [ListcategorysComponent]
 })
 export class IndexCategoryComponent implements OnInit {
 

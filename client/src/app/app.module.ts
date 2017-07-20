@@ -10,12 +10,14 @@ import { Client } from './../apolloClient';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { IndexCategoryComponent } from './Components/index-category/index-category.component';
+import { ListcategorysComponent } from './Components/listcategorys/listcategorys.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    IndexCategoryComponent
+    IndexCategoryComponent,
+    ListcategorysComponent
   ],
   imports: [
     BrowserModule,

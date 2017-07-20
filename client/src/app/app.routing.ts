@@ -1,3 +1,4 @@
+import { ListcategorysComponent } from './Components/listcategorys/listcategorys.component';
 import { IndexCategoryComponent } from './Components/index-category/index-category.component';
 
 import { RouterModule , Routes} from '@angular/router';
