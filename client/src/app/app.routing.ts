@@ -7,4 +7,4 @@ const routes: Routes = [
     {path: '' , component: IndexCategoryComponent }
 ]
 
-export const routing = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes,{ useHash: true });
