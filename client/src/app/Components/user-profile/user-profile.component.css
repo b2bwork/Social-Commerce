@@ -1,7 +1,11 @@
 .sidenav{
+    border-radius: 5px;
     background-color: white;
 }
 
+.userCredential{
+    border-radius: 5px;
+}
 .tools{
     padding-top: 10px;
     padding-bottom: 10px;
