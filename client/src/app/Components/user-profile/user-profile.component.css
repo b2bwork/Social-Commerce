@@ -1,0 +1,12 @@
+.sidenav{
+    background-color: white;
+}
+
+.tools{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.tools:hover{
+    background-color: #E5E5E5;
+    cursor:pointer
+}

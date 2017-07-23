@@ -12,6 +12,9 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { IndexCategoryComponent } from './Components/index-category/index-category.component';
 import { ListcategorysComponent } from './Components/listcategorys/listcategorys.component';
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
+import { UserDataComponent } from './Components/user-profile/user-data/user-data.component';
+import { UserAddressComponent } from './Components/user-profile/user-address/user-address.component';
+import { UserfinanceComponent } from './Components/user-profile/userfinance/userfinance.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { UserProfileComponent } from './Components/user-profile/user-profile.com
     NavbarComponent,
     IndexCategoryComponent,
     ListcategorysComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UserDataComponent,
+    UserAddressComponent,
+    UserfinanceComponent
   ],
   imports: [
     BrowserModule,
