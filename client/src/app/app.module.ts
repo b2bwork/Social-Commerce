@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { IndexCategoryComponent } from './Components/index-category/index-category.component';
 import { ListcategorysComponent } from './Components/listcategorys/listcategorys.component';
+import { UserProfileComponent } from './Components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     IndexCategoryComponent,
-    ListcategorysComponent
+    ListcategorysComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
