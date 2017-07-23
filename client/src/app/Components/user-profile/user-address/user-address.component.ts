@@ -1,3 +1,4 @@
+import { Apollo } from 'apollo-angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserAddressComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apollo:Apollo) { }
 
   ngOnInit() {
   }
