@@ -1,3 +1,5 @@
+import { UserpostreviewComponent } from './Components/userpostreview/userpostreview.component';
+import { PayProductComponent } from './Components/pay-product/pay-product.component';
 import { ProductcontentComponent } from './Components/productcontent/productcontent.component';
 import { ListproductsComponent } from './Components/listproducts/listproducts.component';
 import { LogedComponent } from './Components/loged/loged.component';
@@ -12,6 +14,8 @@ const routes: Routes = [
     {path: 'authed/:Provider/:Token' , component: LogedComponent} ,
     {path: 'products/:Category' , component: ListproductsComponent} ,
     {path: 'buyproduct/:ProductID' ,component: ProductcontentComponent} ,
+    {path: 'pay/:ProductID', component: PayProductComponent} ,
+    {path: 'postreview' , component: UserpostreviewComponent}
 ]
 
 export const routing = RouterModule.forRoot(routes,{ useHash: true });

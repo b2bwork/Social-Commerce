@@ -17,7 +17,7 @@ export class ListcategorysComponent implements OnInit {
         name
         coverImage
       }
-}
+    }
 `;
   data: any;
   loading: boolean;

@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
-import { routing} from './app.routing'
+import { routing } from './app.routing'
 
 
 import { ApolloModule } from 'apollo-angular';
@@ -18,6 +18,8 @@ import { UserfinanceComponent } from './Components/user-profile/userfinance/user
 import { LogedComponent } from './Components/loged/loged.component';
 import { ListproductsComponent } from './Components/listproducts/listproducts.component';
 import { ProductcontentComponent } from './Components/productcontent/productcontent.component';
+import { PayProductComponent } from './Components/pay-product/pay-product.component';
+import { UserpostreviewComponent } from './Components/userpostreview/userpostreview.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +32,18 @@ import { ProductcontentComponent } from './Components/productcontent/productcont
     UserfinanceComponent,
     LogedComponent,
     ListproductsComponent,
-    ProductcontentComponent
+    ProductcontentComponent,
+    PayProductComponent,
+    UserpostreviewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ApolloModule.forRoot(Client) ,
-    FroalaEditorModule.forRoot() ,
-    FroalaViewModule.forRoot() ,
-    routing ,
+    ReactiveFormsModule,
+    ApolloModule.forRoot(Client),
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot(),
+    routing,
   ],
   providers: [],
   bootstrap: [AppComponent]

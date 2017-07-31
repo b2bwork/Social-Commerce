@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
     query image($UserID: String!){
       userProfile(UserID: $UserID){
         profileImage
+        fullName
       }
     }
   `;
@@ -30,6 +31,7 @@ export class NavbarComponent implements OnInit {
           this.userData = data;
           let {userProfile} = this.userData;
           let image = userProfile.profileImage;
+          localStorage.setItem('fullName',userProfile.fullName);
           this.userImage = image.replace('sz=200','sz=40');
           cdRef.detectChanges();
         })
@@ -41,6 +43,8 @@ export class NavbarComponent implements OnInit {
         this.userData = data;
         let {userProfile} = this.userData;
         this.userImage = userProfile.profileImage;
+        localStorage.setItem('fullName',userProfile.fullName);
+        localStorage.setItem('profileImage',userProfile.profileImage);
         cdRef.detectChanges();
       })
     }else{

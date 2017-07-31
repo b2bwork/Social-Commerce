@@ -1,5 +1,5 @@
 <div *ngIf="userAuth == false">
-  <nav class="navbar navbar-fixed-top">
+  <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
         <a routerLink="/">
@@ -34,14 +34,14 @@
           <h4 class="modal-title">สมัครสมาชิก</h4>
         </div>
         <div class="modal-body">
-          <a class="btn btn-block btn-social btn-facebook" href="http://localhost:3001/auth/facebook" >
+          <a class="btn btn-block btn-social btn-facebook" href="http://localhost:3001/auth/facebook">
               <span class="fa fa-facebook"></span> เข้าสู่ระบบด้วย Facebook
             </a>
-            <br>
-            <a class="btn btn-block btn-social btn-google" href="http://localhost:3001/auth/google">
+          <br>
+          <a class="btn btn-block btn-social btn-google" href="http://localhost:3001/auth/google">
               <span class="fa fa-google"></span> เข้าสู่ระบบด้วย Google
             </a>
-            <br>
+          <br>
         </div>
       </div>
 
@@ -49,7 +49,7 @@
   </div>
 </div>
 <div *ngIf="userAuth == true">
-  <nav class="navbar navbar-fixed-top">
+  <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
         <a routerLink="/">
@@ -65,24 +65,30 @@
         <ul class="nav navbar-nav">
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li style="margin-top: 10px">
+            <a routerLink="postreview">
+              <i class="fa fa-pencil" aria-hidden="true"></i> โพสต์รีวิว
+            </a>
+          </li>
           <li class="dropdown">
-          <a href="#" class="dropdown-toggle" 
-             data-toggle="dropdown" role="button" 
-             aria-haspopup="true" aria-expanded="false"><img class="img-circle" [src]="userImage"
-                                                             style="whidth:50px ;height:50px"/> <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a routerLink="/myprofile">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle" [src]="userImage"
+               style="whidth:50px ;height:50px"/> 
+               <span class="caret">
+               </span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/myprofile">
               <i class="fa fa-user" aria-hidden="true"></i> 
               ตั้งค่าโปรไฟล์</a></li>
-            <li class="cursor" (click)="logout()">
-              <a href="http://localhost:4200">
+              <li class="cursor" (click)="logout()">
+                <a href="http://localhost:4200">
                 <i class="fa fa-sign-out" aria-hidden="true">
                   </i>
                 ออกจากระบบ
               </a>
-            </li>
-          </ul>
-        </li>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
