@@ -6,3 +6,7 @@
 .icon-bar{
     background-color: gray;
 }
+
+.cursor{
+    cursor:pointer;
+}

@@ -1,46 +1,90 @@
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <img src="../../../assets/pushthetraffic-logo.png" style="width:40px; height: 40px"/>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
+<div *ngIf="userAuth == false">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a routerLink="/">
+          <img src="../../../assets/pushthetraffic-logo.png" style="width:50px; height: 50px"/>
+        </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar1">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="cursor" data-toggle="modal" data-target="#myModal">
+            <a>
+              <i class="fa fa-sign-in " aria-hidden="true"></i>
+              เข้าสู่ระบบ
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li data-toggle="modal" data-target="#myModal">
-          <a>
-            <i class="fa fa-sign-in " aria-hidden="true"></i>
-             เข้าสู่ระบบ
-          </a>
+  </nav>
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">สมัครสมาชิก</h4>
+        </div>
+        <div class="modal-body">
+          <a class="btn btn-block btn-social btn-facebook" href="http://localhost:3001/auth/facebook" >
+              <span class="fa fa-facebook"></span> เข้าสู่ระบบด้วย Facebook
+            </a>
+            <br>
+            <a class="btn btn-block btn-social btn-google" href="http://localhost:3001/auth/google">
+              <span class="fa fa-google"></span> เข้าสู่ระบบด้วย Google
+            </a>
+            <br>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div *ngIf="userAuth == true">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a routerLink="/">
+          <img src="../../../assets/pushthetraffic-logo.png" style="width:65px; height: 65px"/>
+        </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" 
+             data-toggle="dropdown" role="button" 
+             aria-haspopup="true" aria-expanded="false"><img class="img-circle" [src]="userImage"
+                                                             style="whidth:50px ;height:50px"/> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/myprofile">
+              <i class="fa fa-user" aria-hidden="true"></i> 
+              ตั้งค่าโปรไฟล์</a></li>
+            <li class="cursor" (click)="logout()">
+              <a href="http://localhost:4200">
+                <i class="fa fa-sign-out" aria-hidden="true">
+                  </i>
+                ออกจากระบบ
+              </a>
+            </li>
+          </ul>
         </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">สมัครสมาชิก</h4>
-      </div>
-      <div class="modal-body">
-        <a class="btn btn-block btn-social btn-facebook" >
-            <span class="fa fa-facebook"></span> เข้าสู่ระบบด้วย Facebook
-          </a>
-          <br>
-          <a class="btn btn-block btn-social btn-google" (click)="authGoogle()" data-dismiss="modal">
-            <span class="fa fa-google"></span> เข้าสู่ระบบด้วย Google
-          </a>
-          <br>
+        </ul>
       </div>
     </div>
-
-  </div>
+  </nav>
 </div>
