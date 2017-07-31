@@ -1,0 +1,12 @@
+input:focus{
+    outline: none;
+}
+
+.container{
+    background-color: white;
+}
+
+.row{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
