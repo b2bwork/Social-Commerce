@@ -1,73 +1,73 @@
-<div class="form-horizontal userFinanceBG" >
-      <div class="form-group">
-        <label class="col-sm-3 control-label" for="card-holder-name">
+<div class="form-horizontal userFinanceBG">
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="card-holder-name">
           ชื่อจริง <font style="color:#ff0000 ;font-size: 17px">*</font>
         </label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-3 control-label" for="card-number">
+    <div class="col-sm-5">
+      <input type="text" class="form-control" [(ngModel)]="userCreditCardUserName">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="card-number">
           รหัสบัตร <font style="color:#ff0000 ;font-size: 17px">*</font>
         </label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-3 control-label" for="expiry-month">
-          บัตรหมดอายุ<font style="color:#ff0000 ;font-size: 17px">*</font></label>
-        <div class="col-sm-9">
-          <div class="row">
-            <div class="col-xs-3">
-              <select class="form-control col-sm-2">
-                <option>เดือน</option>
-                <option value="01">มกราคม (01)</option>
-                <option value="02">กุมภาพันธ์ (02)</option>
-                <option value="03">มีนาคม (03)</option>
-                <option value="04">เมษายน (04)</option>
-                <option value="05">พฤษภาคม (05)</option>
-                <option value="06">มิถุนายน (06)</option>
-                <option value="07">กรกฎาคม (07)</option>
-                <option value="08">สิงหาคม (08)</option>
-                <option value="09">กันยายน (09)</option>
-                <option value="10">ตุลาคม (10)</option>
-                <option value="11">พฤศจิกายน (11)</option>
-                <option value="12">ธันวาคม (12)</option>
-              </select>
-            </div>
-            <div class="col-xs-3">
-              <select class="form-control" >
-                <option value="13">2013</option>
-                <option value="14">2014</option>
-                <option value="15">2015</option>
-                <option value="16">2016</option>
-                <option value="17">2017</option>
-                <option value="18">2018</option>
-                <option value="19">2019</option>
-                <option value="20">2020</option>
-                <option value="21">2021</option>
-                <option value="22">2022</option>
-                <option value="23">2023</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-3 control-label" for="cvv">
-          CVC<font style="color:#ff0000 ;font-size: 17px">*</font></label>
-        <div class="col-sm-3">
-          <input type="text" 
-                 class="form-control" >
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-          <button class="btn btn-lg">เพิ่มบัตร</button>
-        </div>
-      </div>
-      <br><br>
-      
+    <div class="col-sm-5">
+      <input type="text" class="form-control" [(ngModel)]="userCreditCardNumber">
+    </div>
   </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="expiry-month">
+          บัตรหมดอายุ<font style="color:#ff0000 ;font-size: 17px">*</font></label>
+    <div class="col-sm-9">
+      <div class="row">
+        <div class="col-xs-3">
+          <select class="form-control col-sm-2" [(ngModel)]="userCreditCardDate">
+                <option>{{userCreditCardDate}}</option>
+                <option [ngValue]="01" selected="selected">มกราคม (01)</option>
+                <option [ngValue]="02">กุมภาพันธ์ (02)</option>
+                <option [ngValue]="03">มีนาคม (03)</option>
+                <option [ngValue]="04">เมษายน (04)</option>
+                <option [ngValue]="05">พฤษภาคม (05)</option>
+                <option [ngValue]="06">มิถุนายน (06)</option>
+                <option [ngValue]="07">กรกฎาคม (07)</option>
+                <option [ngValue]="08">สิงหาคม (08)</option>
+                <option [ngValue]="09">กันยายน (09)</option>
+                <option [ngValue]="10">ตุลาคม (10)</option>
+                <option [ngValue]="11">พฤศจิกายน (11)</option>
+                <option [ngValue]="12">ธันวาคม (12)</option>
+              </select>
+        </div>
+        <div class="col-xs-3">
+          <select class="form-control" [(ngModel)]="userCreditCardYear">
+                <option>{{userCreditCardYear}}</option>
+                <option [ngValue]="2013" selected="selected">2013</option>
+                <option [ngValue]="2014">2014</option>
+                <option [ngValue]="2015">2015</option>
+                <option [ngValue]="2016">2016</option>
+                <option [ngValue]="2017">2017</option>
+                <option [ngValue]="2018">2018</option>
+                <option [ngValue]="2019">2019</option>
+                <option [ngValue]="2020">2020</option>
+                <option [ngValue]="2021">2021</option>
+                <option [ngValue]="2022">2022</option>
+                <option [ngValue]="2023">2023</option>
+              </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label" for="cvv">
+          CVC<font style="color:#ff0000 ;font-size: 17px">*</font></label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" [(ngModel)]="userCreditCardCVC">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <button class="btn btn-lg" (click)="mutationUserFinance()">เพิ่มบัตร</button>
+    </div>
+  </div>
+  <br><br>
+
+</div>

@@ -6,7 +6,8 @@
         </label>
         <input type="text" 
                class="form-control" 
-               style="margin-left:1px;width:450px">
+               style="margin-left:1px;width:450px"
+               [(ngModel)] = "userfullNameAddress">
         <br>
         <br>
       </div>
@@ -15,7 +16,8 @@
         </label>
         <input type="text" 
                class="form-control" 
-               style="margin-left:20px;width:450px">
+               style="margin-left:20px;width:450px"
+               [(ngModel)] = "userAddress">
         <br>
         <br>
       </div>
@@ -24,7 +26,8 @@
         </label>
         <input type="text" 
                class="form-control" 
-               style="margin-left:22px;width:150px">
+               style="margin-left:22px;width:150px"
+               [(ngModel)] = "userCity">
       </div>
       <br>
       <br>
@@ -33,7 +36,8 @@
         </label>
         <input type="text" 
                class="form-control" 
-               style="margin-left:46px;width:150px">
+               style="margin-left:46px;width:150px"
+               [(ngModel)] = "userProvince">
       </div>
       <br>
       <br>
@@ -42,7 +46,8 @@
         </label>
         <input type="text" 
                class="form-control" 
-               style="margin-left:10px;width:150px">
+               style="margin-left:10px;width:150px"
+               [(ngModel)] = "userPostalCode">
       </div>
       <br>
       <br>
@@ -51,12 +56,13 @@
         </label>
         <input type="text" 
                class="form-control" 
-               style="margin-left:22px;width:150px">
+               style="margin-left:22px;width:150px"
+               [(ngModel)] = "userPhoneNumber">
 
       </div>
     </div>
     <br>
-    <button class="btn btn-lg" >แก้ไขข้อมูล</button>
+    <button class="btn btn-lg" (click)="updataAddress()" >แก้ไขข้อมูล</button>
     <br><br>
   </div>
   

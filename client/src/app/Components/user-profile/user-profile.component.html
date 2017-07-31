@@ -2,27 +2,30 @@
   <div class="row">
     <div class="col-md-2 col-xs-3 col-sm-3 sidenav text-center">
       <div style="margin-left: 10% ; margin-top: 20px">
-            <div class="tools" (click)="onUserData()">
-              <h5>
-                <i class="fa fa-user" aria-hidden="true"></i> ข้อมูลส่วนตัว
-              </h5>
-            </div><br>
-            <div class="tools" (click)="onUserAddress()">
-              <h5>
-                <i class="fa fa-map-marker" aria-hidden="true"></i> ที่อยู่
-              </h5>
-            </div><br>
-            <div class="tools" (click)="onUserFinance()">
-              <h5>
-                <i class="fa fa-credit-card" aria-hidden="true"></i> ธุรกรรมการเงิน
-              </h5>
-            </div><br>
+        <div class="tools" (click)="onUserData()">
+          <h5>
+            <i class="fa fa-user" aria-hidden="true"></i> ข้อมูลส่วนตัว
+          </h5>
+        </div>
+        <br>
+        <div class="tools" (click)="onUserAddress()">
+          <h5>
+            <i class="fa fa-map-marker" aria-hidden="true"></i> ที่อยู่
+          </h5>
+        </div>
+        <br>
       </div>
     </div>
     <div class="col-md-10 col-xs-9 col-sm-9">
-      <div *ngIf="isUserData" class="w3-animate-right"><user-data></user-data></div>
-      <div *ngIf="isUserAddress" class="w3-animate-right"><user-address></user-address></div>
-      <div *ngIf="isUserFinance" class="w3-animate-right"><user-finance></user-finance></div>
+      <div *ngIf="isUserData" class="w3-animate-right">
+        <user-data></user-data>
+      </div>
+      <div *ngIf="isUserAddress" class="w3-animate-right">
+        <user-address></user-address>
+      </div>
+      <div *ngIf="isUserFinance" class="w3-animate-right">
+        <user-finance></user-finance>
+      </div>
     </div>
   </div>
 </div>

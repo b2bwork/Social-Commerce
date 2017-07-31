@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UserfinanceComponent } from './userfinance/userfinance.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { UserAddressComponent } from './user-address/user-address.component';
@@ -16,7 +17,12 @@ export class UserProfileComponent implements OnInit {
   isUserAddress: boolean = false;
   isUserFinance: boolean = false;
 
-  constructor() { }
+  constructor(private routing: Router) { 
+    if(localStorage.getItem('userID') == null){
+      routing.navigate(['/']);
+    }
+
+  }
 
   onUserAddress(){
     this.isUserAddress = true;
