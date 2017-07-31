@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { routing} from './app.routing'
 
 
@@ -9,29 +10,35 @@ import { Client } from './../apolloClient';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
-import { IndexCategoryComponent } from './Components/index-category/index-category.component';
 import { ListcategorysComponent } from './Components/listcategorys/listcategorys.component';
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
 import { UserDataComponent } from './Components/user-profile/user-data/user-data.component';
 import { UserAddressComponent } from './Components/user-profile/user-address/user-address.component';
 import { UserfinanceComponent } from './Components/user-profile/userfinance/userfinance.component';
+import { LogedComponent } from './Components/loged/loged.component';
+import { ListproductsComponent } from './Components/listproducts/listproducts.component';
+import { ProductcontentComponent } from './Components/productcontent/productcontent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    IndexCategoryComponent,
     ListcategorysComponent,
     UserProfileComponent,
     UserDataComponent,
     UserAddressComponent,
-    UserfinanceComponent
+    UserfinanceComponent,
+    LogedComponent,
+    ListproductsComponent,
+    ProductcontentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ApolloModule.forRoot(Client),
-    routing,
+    ApolloModule.forRoot(Client) ,
+    FroalaEditorModule.forRoot() ,
+    FroalaViewModule.forRoot() ,
+    routing ,
   ],
   providers: [],
   bootstrap: [AppComponent]
