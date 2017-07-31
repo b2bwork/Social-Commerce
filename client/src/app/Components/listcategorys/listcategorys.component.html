@@ -1,13 +1,32 @@
-<div *ngIf="!loading">
-  <div *ngFor="let list of listCategorys.listCategory" style="margin-top: 5%">
-    <div class="col-sm-6 col-md-3 w3-animate-right " data-toggle="modal" data-target="#myModal">
-      <div class="thumbnail image shadow">
-        <img [src]="list.Image" style="width:98%; height:250px">
-        <div class="caption">
-          <h1>{{list.Name}}</h1>
-        </div>
-       </div>
+<div class="container">
+  <div *ngIf="loged">
+    <div *ngIf="!loading">
+      <div *ngFor="let list of listcategorys" style="margin-top: 5%">
+        <a [routerLink]="['/products',list._id]">
+          <div class="col-sm-6 col-md-3 w3-animate-right ">
+            <div class="thumbnail image shadow">
+              <img [src]="list.coverImage" style="width:98%; height:200px">
+              <div class="caption">
+                <h1>{{list.name}}</h1>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
+    </div>
   </div>
-</div> 
-    
+  <div *ngIf="!loged">
+    <div *ngIf="!loading">
+      <div *ngFor="let list of listcategorys" style="margin-top: 5%">
+        <div class="col-sm-6 col-md-2 w3-animate-right cursor" data-toggle="modal" data-target="#myModal">
+          <div class="thumbnail image shadow">
+            <img [src]="list.coverImage" style="width:98%; height:200px">
+            <div class="caption">
+              <h1>{{list.name}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

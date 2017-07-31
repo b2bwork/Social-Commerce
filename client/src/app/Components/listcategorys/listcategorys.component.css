@@ -7,11 +7,15 @@ h1{
    /*background: rgb(0, 0, 0); /* fallback color */
    /*background: rgba(0, 0, 0, 0.1);*/
    position: absolute; 
-   top: 200px; 
+   top: 150px; 
    left: 20px; 
    
 }
 
 .shadow{
     box-shadow: 3px 3px 2px grey;
+}
+
+.cursor{
+    cursor: pointer
 }
