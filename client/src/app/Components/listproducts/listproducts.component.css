@@ -1,0 +1,20 @@
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h3{ 
+   /*background: rgb(0, 0, 0); /* fallback color */
+   /*background: rgba(0, 0, 0, 0.1);*/
+   position: absolute; 
+   top: 20px; 
+   left: 20px; 
+   background-color: #6E6E6E;
+   color: white;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-right: 5px;
+   padding-left: 5px;
+   border-radius: 5px;
+   
+}

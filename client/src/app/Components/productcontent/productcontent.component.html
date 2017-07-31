@@ -1,0 +1,21 @@
+<div *ngIf="!loading">
+  <div class="row w3-animate-right">
+    <div class="col-md-8 col-sm-12 col-xs-12 productContent ">
+      <br>
+      <div class="thumbnail">
+        <h2 class="productName">{{product.name}}</h2>
+      </div>
+      <br>
+      <div [innerHTML]="product.description">
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12 text-center">
+      <br>
+      <div class="thumbnail">
+        <h3><span>&#3647;</span> {{product.price}} บาท</h3>
+        <button class="btn btn-lg">ซื้อ</button>
+      </div>
+      <br><br>
+    </div>
+  </div>
+</div>

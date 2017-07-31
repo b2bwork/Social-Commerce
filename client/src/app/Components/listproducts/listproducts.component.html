@@ -1,0 +1,14 @@
+<div *ngIf="!loading">
+  <div *ngFor="let list of products" style="margin-top: 5%">
+    <a [routerLink]="['/buyproduct',list._id]">
+      <div class="col-sm-6 col-md-3 w3-animate-right " data-toggle="modal" data-target="#myModal">
+        <div class="thumbnail image shadow">
+          <img [src]="list.images[0]" style="width:98%; height:200px">
+          <div class="caption">
+            <h3><span>&#3647;</span> {{list.price}} บาท</h3>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
