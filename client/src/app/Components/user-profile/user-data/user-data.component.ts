@@ -43,6 +43,7 @@ export class UserDataComponent implements OnInit {
   userEmail: String;
   userBio: String;
   userPicture: String
+  updated: String = '';
 
   constructor(private apollo: Apollo) { 
     this.queryData();
@@ -72,7 +73,9 @@ export class UserDataComponent implements OnInit {
       fullName: this.userFullName ,
       email: this.userEmail , 
       bio: this.userBio ,
-    }}).subscribe((data)=>{console.log(data)})
+    }}).subscribe((data)=>{console.log(data)
+      this.updated = 'แก้ไข้ข้อมูลเรียบร้อย'
+    })
   }
 
   ngOnInit() {

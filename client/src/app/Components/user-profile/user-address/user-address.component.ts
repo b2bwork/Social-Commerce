@@ -52,6 +52,7 @@ export class UserAddressComponent implements OnInit {
   userProvince: String ;
   userPostalCode: String ;
   userPhoneNumber: String ;
+  updated: String = '';
 
   constructor(private apollo:Apollo) { 
     this.queryUserAddress();
@@ -86,6 +87,7 @@ export class UserAddressComponent implements OnInit {
       postalCode: this.userPostalCode ,
       phoneNumber: this.userPhoneNumber ,
     }}).subscribe((data)=>{
+      this.updated = 'แก้ไข้ข้อมูลเรียบร้อย'
       console.log(data)
     })
     
