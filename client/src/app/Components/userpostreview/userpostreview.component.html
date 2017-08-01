@@ -1,8 +1,14 @@
 <div class="container w3-animate-left">
   <div class="row">
-    <div class="col-md-12 col-xs-12 col-sm-12">
-      <button class="btn btn-lg" (click)="postReview()">โพสต์รีวิว</button>
-      <h3 style="color: red">{{posted}}</h3>
+    <div class="col-md-12 col-xs-12 col-sm-12  ">
+      <img [src]="previewImage" style="height:200px ; width: 100%" *ngIf="previewImage != null">
+        <label class="btn btn-default">
+          <input type="file"
+               ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput"
+               (change)="readUrl($event)"
+               class="inputfile" hidden>
+               sawda
+        </label>
     </div>
     <div class="col-md-12 col-xs-12 col-sm-12">
       <div class="col-md-3 col-sm-4 col-xs-6 text-right">
@@ -25,5 +31,9 @@
   </div>
   <div [froalaEditor]="froalaConfig" [(froalaModel)]="userReviewContent"></div>
   <br>
-  
+  <div class="col-md-12 col-xs-12 col-sm-12">
+    <button class="btn btn-lg" (click)="postReview()">โพสต์รีวิว</button>
+    <h3 style="color: red">{{posted}}</h3>
+  </div>
+
 </div>
