@@ -1,3 +1,5 @@
+import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent.component';
+import { ListpostreviewComponent } from './Components/listpostreview/listpostreview.component';
 import { UserpostreviewComponent } from './Components/userpostreview/userpostreview.component';
 import { PayProductComponent } from './Components/pay-product/pay-product.component';
 import { ProductcontentComponent } from './Components/productcontent/productcontent.component';
@@ -15,7 +17,9 @@ const routes: Routes = [
     {path: 'products/:Category' , component: ListproductsComponent} ,
     {path: 'buyproduct/:ProductID' ,component: ProductcontentComponent} ,
     {path: 'pay/:ProductID', component: PayProductComponent} ,
-    {path: 'postreview' , component: UserpostreviewComponent}
+    {path: 'postreview' , component: UserpostreviewComponent} ,
+    {path: 'reviews' , component: ListpostreviewComponent},
+    {path: 'reviews/content/:ReviewID' , component: ReviewcontentComponent},
 ]
 
 export const routing = RouterModule.forRoot(routes,{ useHash: true });

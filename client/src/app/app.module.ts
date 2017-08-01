@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { NgUploaderModule } from 'ngx-uploader';
 import { routing } from './app.routing'
 
 
@@ -20,6 +21,8 @@ import { ListproductsComponent } from './Components/listproducts/listproducts.co
 import { ProductcontentComponent } from './Components/productcontent/productcontent.component';
 import { PayProductComponent } from './Components/pay-product/pay-product.component';
 import { UserpostreviewComponent } from './Components/userpostreview/userpostreview.component';
+import { ListpostreviewComponent } from './Components/listpostreview/listpostreview.component';
+import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { UserpostreviewComponent } from './Components/userpostreview/userpostrev
     ListproductsComponent,
     ProductcontentComponent,
     PayProductComponent,
-    UserpostreviewComponent
+    UserpostreviewComponent,
+    ListpostreviewComponent,
+    ReviewcontentComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,7 @@ import { UserpostreviewComponent } from './Components/userpostreview/userpostrev
     FroalaEditorModule.forRoot(),
     FroalaViewModule.forRoot(),
     routing,
+    NgUploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

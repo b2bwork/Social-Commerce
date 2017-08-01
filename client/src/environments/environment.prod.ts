@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
-  froalaEditor: {
-    placeholderText: 'Edit Your Content Here!',
+  productContent: {
+    placeholderText: 'products',
     charCounterCount: false,
     tooltips: false,
     toolbarSticky: false,

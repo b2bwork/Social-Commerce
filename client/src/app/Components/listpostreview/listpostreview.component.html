@@ -1,7 +1,8 @@
 <div *ngIf="!loading">
-  <div class="container">
+  <div class="container w3-animate-right">
     <div *ngFor=" let data of reviews">
-      <div class="col-md-12 col-xs-12 col-sm-12 review " style="width: 80%; margin-left: 9.5%; ">
+      <a [routerLink] = "['/reviews/content',data._id]">
+        <div class="col-md-12 col-xs-12 col-sm-12 review " style="width: 80%; margin-left: 9.5%; ">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <h2>{{data.title}}</h2>
           </div>
@@ -14,7 +15,8 @@
               <h4>{{data.userName}}</h4>
             </div>
           </div>
-      </div>
+        </div>
+      </a>
     </div>
   </div>
 </div>

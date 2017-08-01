@@ -1,3 +1,25 @@
-<p>
-  reviewcontent works!
-</p>
+<div *ngIf="!loading">
+  <div class=" w3-animate-right">
+    <div class="col-md-12 col-xs-12 col-sm-12 review " style="width: 80%; margin-left: 9.5%; ">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h2>{{reviewData.title}}</h2>
+      </div>
+      <div class="col-md-12 col-xs-12 col-sm-6 thumbnail">
+        <div class="col-md-12 col-xs-12 col-sm-6 thumbnail">
+          <div class="col-md-9 col-xs-12 col-sm-6 thumbnail">
+            <img [src]="reviewData.coverImage" style="height:250px">
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-6 ">
+            <div class="col-md-12 text-center ">
+              <img class="img-circle" style="width:30% ; height: 30%;" [src]="reviewData.userImage" /><br>
+              <h4>{{reviewData.userName}}</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-xs-12 col-sm-6 thumbnail" [innerHTML]="reviewData.content">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
