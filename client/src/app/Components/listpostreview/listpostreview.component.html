@@ -1,0 +1,20 @@
+<div *ngIf="!loading">
+  <div class="container">
+    <div *ngFor=" let data of reviews">
+      <div class="col-md-12 col-xs-12 col-sm-12 review " style="width: 80%; margin-left: 9.5%; ">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2>{{data.title}}</h2>
+          </div>
+          <div class="col-md-9 col-xs-12 col-sm-6 thumbnail">
+            <img [src]="data.coverImage">
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-6 space">
+            <div class="col-md-12 text-center space">
+              <img class="img-circle" style="width:40% ; height: 40%;" [src]="data.userImage" /><br>
+              <h4>{{data.userName}}</h4>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

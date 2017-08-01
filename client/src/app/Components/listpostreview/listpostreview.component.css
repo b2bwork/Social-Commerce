@@ -1,0 +1,16 @@
+
+.review{
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 10px 10px 5px #888888;
+    border-radius: 10px;
+}
+
+.space{
+    padding-top: 10%;
+    padding-bottom: 10px;
+}
+
+.thumbnail{
+    border-style: none;
+}

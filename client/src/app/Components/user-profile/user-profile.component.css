@@ -14,3 +14,11 @@
     background-color: #E5E5E5;
     cursor:pointer
 }
+
+[hidden] {
+  display: none !important;
+}
+
+input[type='file'] {
+  color: transparent;
+}
