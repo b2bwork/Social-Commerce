@@ -1,6 +1,7 @@
 .navbar{
     background-color: white;
     box-shadow: 3px 3px 2px grey;
+    border-radius: 0px;
 }
 
 .icon-bar{

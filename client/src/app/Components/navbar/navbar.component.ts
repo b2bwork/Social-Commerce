@@ -32,6 +32,7 @@ export class NavbarComponent implements OnInit {
           let {userProfile} = this.userData;
           let image = userProfile.profileImage;
           localStorage.setItem('fullName',userProfile.fullName);
+          localStorage.setItem('profileImage',userProfile.profileImage);
           this.userImage = image.replace('sz=200','sz=40');
           cdRef.detectChanges();
         })
