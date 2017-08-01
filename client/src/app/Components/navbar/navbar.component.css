@@ -11,3 +11,7 @@
 .cursor{
     cursor:pointer;
 }
+
+.voting{
+    background-image: url('../../../assets/image/voting.png');
+}

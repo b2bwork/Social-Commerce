@@ -34,7 +34,6 @@ export class ListpostreviewComponent implements OnInit {
       let {listPostReview} = returnData;
       this.loading = loading;
       this.reviews = listPostReview;
-      console.log(data)
     });
   }
 
