@@ -23,6 +23,7 @@ import { PayProductComponent } from './Components/pay-product/pay-product.compon
 import { UserpostreviewComponent } from './Components/userpostreview/userpostreview.component';
 import { ListpostreviewComponent } from './Components/listpostreview/listpostreview.component';
 import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent.component';
+import { ReverseCommentPipe } from './Pipes/reverse-comment.pipe';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent
     UserpostreviewComponent,
     ListpostreviewComponent,
     ReviewcontentComponent,
+    ReverseCommentPipe,
   ],
   imports: [
     BrowserModule,

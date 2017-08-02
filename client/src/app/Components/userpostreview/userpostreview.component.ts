@@ -95,7 +95,7 @@ export class UserpostreviewComponent implements OnInit {
         let returndata: any = data.data;
         if (returndata.userPostReview.userID == 'success') {
           this.startUpload(returndata.userPostReview._id);
-          this.router.navigate(['/']);
+          this.router.navigate(['/reviews']);
         } else if (returndata.userPostReview.userID == 'fail') {
           this.posted = 'เกิดปัญหาการโพส';
         }

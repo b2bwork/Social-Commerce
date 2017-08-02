@@ -7,7 +7,10 @@
 .thumbnail{
     border: none;
 }
-
+.btn{
+    background-color: #3498db;
+    color: white;
+}
 .comments{
     background-color: white;
     margin-top: 30px;
@@ -18,3 +21,29 @@
     box-shadow: 10px 10px 5px #888888;
     border-radius: 10px;
 }
+.listcomment{
+    margin-top: 2%;
+    background-color: white;
+    width: 78.5%;
+    margin-left: 10.5%;
+    box-shadow: 10px 10px 5px #888888;
+    border-radius: 10px;
+}
+
+.form-control{
+    border: none;
+    margin-top: 3%;
+    height: 110px;
+    width: 100%;
+}
+
+textarea::placeholder{
+    color: #888888;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.commentData{
+    padding-top: 5%;
+}
+

@@ -18,14 +18,43 @@
     </div>
   </div>
 </div>
-<div class="row" *ngFor="let comment of reviewComment">
-  <div class="col-md-12 col-xs-12 col-sm-12 comments " >
+<div class="col-md-12 col-xs-12 col-sm-12 listcomment addComment">
+  <div class="col-md-3 col-xs-12 col-sm-3 text-center thumbnail  ">
+    <img class="img-circle" style="width:20% ; height: 20%; margin-top: 30px" [src]="useraddCommentImage" /><br>
+    <h4>{{useraddCommentName}}</h4>
+  </div>
+  <div class="col-md-9 col-xs-12 col-sm-9 text-left thumbnail addComment">
+    <div class="form-group">
+      <textarea class="form-control col-sm-10 col-xs-6" [(ngModel)]="comment" placeholder="แสดงความคิดเห็น">
+
+      </textarea>
+      <label class="control-label col-sm-2 col-md-12 col-xs-6" for="email">
+        <br>
+      <button class="btn" (click)="addComment()">แสดงความคิดเห็น</button></label>
+    </div>
+  </div>
+</div>
+<div *ngIf="fakeComment.length > 0">
+  <div class="row" *ngFor="let comment of fakeComment | reverseComment">
+    <div class="col-md-12 col-xs-12 col-sm-12 listcomment w3-animate-right ">
+      <div class="col-md-3 col-xs-12 col-sm-3 text-center thumbnail ">
+        <img class="img-circle" style="width:15% ; height: 15%;" [src]="comment.userImage" /><br>
+        <h4>{{comment.userName}}</h4>
+      </div>
+      <div class="col-md-9 col-xs-12 col-sm-9 text-center">
+        <h5 class="commentData">{{comment.comment}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" *ngFor="let comment of reviewComment | reverseComment">
+  <div class="col-md-12 col-xs-12 col-sm-12 listcomment w3-animate-right ">
     <div class="col-md-3 col-xs-12 col-sm-3 text-center thumbnail ">
-      <img class="img-circle" style="width:10% ; height: 10%;" [src]="comment.userImage" /><br>
+      <img class="img-circle" style="width:15% ; height: 15%;" [src]="comment.userImage" /><br>
       <h4>{{comment.userName}}</h4>
     </div>
-    <div class="col-md-9 col-xs-12 col-sm-9">
-      <h5>{{comment.comment}}</h5>
+    <div class="col-md-9 col-xs-12 col-sm-9 text-center">
+      <h5 class="commentData">{{comment.comment}}</h5>
     </div>
   </div>
 </div>
