@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'reviewcontent',
   templateUrl: './reviewcontent.component.html',
-  styleUrls: ['./reviewcontent.component.css']
+  styleUrls: ['./reviewcontent.component.css'] 
 })
 export class ReviewcontentComponent implements OnInit {
+
   reviewContenQuery = gql`
-    query review($_id:String!){
-      reviewContent(_id:$_id){
+    query review($reviewID:String!){
+      reviewContent(_id:$reviewID){
         _id
         coverImage
         userName
@@ -19,10 +20,18 @@ export class ReviewcontentComponent implements OnInit {
         title
         content
       }
+      reviewComment(reviewID:$reviewID){
+        _id
+        userName
+        userImage
+        userID
+        comment
+      }
     }
   `;
 
   reviewData : any;
+  reviewComment: any;
   loading: boolean
   constructor(private apollo: Apollo , private routing: ActivatedRoute) { 
     routing.params.subscribe((params)=>{
@@ -32,12 +41,14 @@ export class ReviewcontentComponent implements OnInit {
 
   reviewContent(_id: String ){
     this.apollo.watchQuery({query: this.reviewContenQuery,variables:{
-      _id: _id
+      reviewID: _id
     }})
       .subscribe(({ data, loading })=>{
         let returndata: any = data;
-        let {reviewContent} = returndata;
+        let {reviewContent , reviewComment} = returndata;
         this.reviewData = reviewContent;
+        this.reviewComment = reviewComment;
+        console.log(reviewComment)
         this.loading = loading;
 
       });

@@ -4,22 +4,28 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <h2>{{reviewData.title}}</h2>
       </div>
-      <div class="col-md-12 col-xs-12 col-sm-6 thumbnail">
-        <div class="col-md-12 col-xs-12 col-sm-6 thumbnail">
-          <div class="col-md-9 col-xs-12 col-sm-6 thumbnail">
-            <img [src]="reviewData.coverImage" style="height:250px">
-          </div>
-          <div class="col-md-3 col-xs-12 col-sm-6 ">
-            <div class="col-md-12 text-center author">
-              <img class="img-circle" style="width:30% ; height: 30%;" [src]="reviewData.userImage" /><br>
-              <h4>{{reviewData.userName}}</h4>
-            </div>
-          </div>
+      <div class="col-md-12 col-xs-12 col-sm-12 thumbnail">
+        <div class="col-md-9 col-xs-12 col-sm-9 thumbnail">
+          <img [src]="reviewData.coverImage" style="height:250px">
         </div>
-        <div class="col-md-12 col-xs-12 col-sm-6 thumbnail" [innerHTML]="reviewData.content">
+        <div class="col-md-3 col-xs-12 col-sm-3 text-center author">
+          <img class="img-circle" style="width:40% ; height: 40%;" [src]="reviewData.userImage" /><br>
+          <h4>{{reviewData.userName}}</h4>
         </div>
       </div>
-
+      <div class="col-md-12 col-xs-12 col-sm-12 thumbnail" [innerHTML]="reviewData.content">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" *ngFor="let comment of reviewComment">
+  <div class="col-md-12 col-xs-12 col-sm-12 comments " >
+    <div class="col-md-3 col-xs-12 col-sm-3 text-center thumbnail ">
+      <img class="img-circle" style="width:10% ; height: 10%;" [src]="comment.userImage" /><br>
+      <h4>{{comment.userName}}</h4>
+    </div>
+    <div class="col-md-9 col-xs-12 col-sm-9">
+      <h5>{{comment.comment}}</h5>
     </div>
   </div>
 </div>

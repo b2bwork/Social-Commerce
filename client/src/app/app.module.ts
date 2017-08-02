@@ -39,7 +39,7 @@ import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent
     PayProductComponent,
     UserpostreviewComponent,
     ListpostreviewComponent,
-    ReviewcontentComponent
+    ReviewcontentComponent,
   ],
   imports: [
     BrowserModule,
