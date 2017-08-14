@@ -1,3 +1,5 @@
+import { AddpollProductComponent } from './Components/addpoll-product/addpoll-product.component';
+import { ListpollproductComponent } from './Components/listpollproduct/listpollproduct.component';
 import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent.component';
 import { ListpostreviewComponent } from './Components/listpostreview/listpostreview.component';
 import { UserpostreviewComponent } from './Components/userpostreview/userpostreview.component';
@@ -20,6 +22,8 @@ const routes: Routes = [
     {path: 'postreview' , component: UserpostreviewComponent} ,
     {path: 'reviews' , component: ListpostreviewComponent},
     {path: 'reviews/content/:ReviewID' , component: ReviewcontentComponent},
+    {path: 'pollproducts' , component: ListpollproductComponent},
+    {path: 'addpoll' , component: AddpollProductComponent},
 ]
 
 export const routing = RouterModule.forRoot(routes,{ useHash: true });

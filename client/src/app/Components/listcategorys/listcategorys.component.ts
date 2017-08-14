@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , OnDestroy} from '@angular/core';
 import { Apollo, ApolloQueryObservable } from 'apollo-angular';
 import gql from 'graphql-tag';
 import 'rxjs/add/operator/map';
+import { Subscription } from "apollo-client";
 
 @Component({
   selector: 'listcategorys',
   templateUrl: './listcategorys.component.html',
   styleUrls: ['./listcategorys.component.css']
 })
-export class ListcategorysComponent implements OnInit {
+export class ListcategorysComponent implements OnInit,OnDestroy{
+
+  sub: Subscription;
 
   listCategorysQuery = gql`
     query{
@@ -28,7 +31,7 @@ export class ListcategorysComponent implements OnInit {
   }
   listCategory() {
     if (localStorage.getItem('userID') != null && localStorage.getItem('provider') != null) {
-      this.list.watchQuery({ query: this.listCategorysQuery }).subscribe(({ data, loading }) => {
+      this.sub = this.list.watchQuery({ query: this.listCategorysQuery }).subscribe(({ data, loading }) => {
         this.data = data;
         let { liscategory } = this.data;
         this.listcategorys = liscategory;
@@ -36,7 +39,7 @@ export class ListcategorysComponent implements OnInit {
         this.loged = true
       })
     } else {
-      this.list.watchQuery({ query: this.listCategorysQuery }).subscribe(({ data, loading }) => {
+      this.sub = this.list.watchQuery({ query: this.listCategorysQuery }).subscribe(({ data, loading }) => {
         this.data = data;
         let { liscategory } = this.data;
         this.listcategorys = liscategory;
@@ -47,6 +50,9 @@ export class ListcategorysComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 
 }

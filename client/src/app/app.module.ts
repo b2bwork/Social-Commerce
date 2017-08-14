@@ -24,6 +24,8 @@ import { UserpostreviewComponent } from './Components/userpostreview/userpostrev
 import { ListpostreviewComponent } from './Components/listpostreview/listpostreview.component';
 import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent.component';
 import { ReverseCommentPipe } from './Pipes/reverse-comment.pipe';
+import { ListpollproductComponent } from './Components/listpollproduct/listpollproduct.component';
+import { AddpollProductComponent } from './Components/addpoll-product/addpoll-product.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { ReverseCommentPipe } from './Pipes/reverse-comment.pipe';
     ListpostreviewComponent,
     ReviewcontentComponent,
     ReverseCommentPipe,
+    ListpollproductComponent,
+    AddpollProductComponent,
   ],
   imports: [
     BrowserModule,

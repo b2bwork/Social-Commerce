@@ -1,0 +1,26 @@
+
+p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buttonAdd {
+    margin-top: 10px;
+    text-align: center;
+    position: fixed;
+    left: auto;
+    width: 8.5em;
+    right: 2em;
+    z-index: 3;
+}
+
+.buttonPoll{
+    color: white;
+    background-color: #19B5FE;
+    border-radius: 60px;
+}
+
+.add{
+    font-size: 40px;
+    padding-top: 5px;
+}
