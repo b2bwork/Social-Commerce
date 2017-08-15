@@ -1,6 +1,6 @@
 <div *ngIf="!loading">
   <div class="container w3-animate-right">
-    <div *ngFor=" let data of reviews">
+    <div *ngFor=" let data of reviews | reverseComment">
       <a [routerLink] = "['/reviews/content',data._id]">
         <div class="col-md-12 col-xs-12 col-sm-12 review " style="width: 80%; margin-left: 9.5%; ">
           <div class="col-md-12 col-sm-12 col-xs-12">
