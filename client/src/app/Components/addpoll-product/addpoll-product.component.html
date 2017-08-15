@@ -1,24 +1,30 @@
 <div class="container w3-animate-right">
   <div class="col-md-6 col-xs-12 col-sm-6">
-      <div class="col-md-12 col-xs-12 col-sm-12">
-        <label class="upload-button">
-            <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
-        </label>
-      </div>
-      <div class="col-md-12 col-xs-12 col-sm-12">
-        <input type="text" class="form-control" placeholder="ชื่อสินค้า" #product1>
-      </div>
+    <div class="col-md-12 col-xs-12 col-sm-12 upload-btn-wrapper">
+      <br><br>
+      <img [src]="previewImage1" style="height:200px ; width: 100%" *ngIf="previewImage1 != null">
+      <br><br>
+      <button class="btn"><i class="fa fa-camera" aria-hidden="true"></i></button>
+      <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" (change)="readUrl1($event)">
+    </div>
+    <div class="col-md-12 col-xs-12 col-sm-12">
+      <br>
+      <input type="text" class="form-control" placeholder="ชื่อสินค้า" #product1>
+    </div>
   </div>
   <div class="col-md-6 col-xs-12 col-sm-6">
-      <div class="col-md-12 col-xs-12 col-sm-12">
-        <label class="upload-button">
-            <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
-        </label>
-      </div>
-      <div class="col-md-12 col-xs-12 col-sm-12">
-        <input type="text" class="form-control" placeholder="ชื่อสินค้า" #product2>
-      </div>
+    <div class="col-md-12 col-xs-12 col-sm-12 upload-btn-wrapper">
+      <br><br>
+      <img [src]="previewImage2" style="height:200px ; width: 100%" *ngIf="previewImage2 != null">
+      <br><br>
+      <button class="btn"><i class="fa fa-camera" aria-hidden="true"></i></button>
+      <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" (change)="readUrl2($event)">
     </div>
+    <div class="col-md-12 col-xs-12 col-sm-12">
+      <br>
+      <input type="text" class="form-control" placeholder="ชื่อสินค้า" #product2>
+    </div>
+  </div>
   <button class="btn btn-info btn-lg" (click)="addPoll(product1.value , product2.value)" style="margin-top: 20px;">
       เพิ่มโพล
     </button>

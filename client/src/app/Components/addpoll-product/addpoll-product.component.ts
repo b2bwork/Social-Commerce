@@ -10,6 +10,8 @@ import { UploadOutput, UploadInput, UploadFile, humanizeBytes } from 'ngx-upload
   styleUrls: ['./addpoll-product.component.css']
 })
 export class AddpollProductComponent implements OnInit {
+  previewImage2: any;
+  previewImage1: any;
   name = '';
   productNames = [];
   formData: FormData;
@@ -70,6 +72,31 @@ export class AddpollProductComponent implements OnInit {
     };
 
     this.uploadInput.emit(event);
+  }
+
+  readUrl1(event) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = (event) => {
+        let data: any = event.target;
+        this.previewImage1 = data.result;
+      }
+
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  }
+  readUrl2(event) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = (event) => {
+        let data: any = event.target;
+        this.previewImage2 = data.result;
+      }
+
+      reader.readAsDataURL(event.target.files[0]);
+    }
   }
 
   addPoll(product1 , product2){
