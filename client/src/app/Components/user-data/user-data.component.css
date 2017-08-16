@@ -1,0 +1,50 @@
+.container{
+    background-color: white;
+    width: 87%;
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.img-circle{
+    width: 130px;
+    height: 130px;
+}
+
+.navbar-center{
+    float:none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+}
+
+.basicData{
+    padding-bottom: 30px;
+}
+
+
+.pills{
+    background-color: #19B5FE;
+    border-radius: 20px;
+}
+
+.pills:hover{
+    background-color: #22A7F0;
+    border-radius: 20px;
+}
+
+.pills:active{
+    background-color: #22A7F0;
+    border-radius: 20px;
+}
+
+.review{
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 0px  0px 5px 2px #888888;
+    border-radius: 10px;
+}
+
+.bottomSpace{
+    padding-bottom: 60px;
+}
