@@ -1,3 +1,64 @@
-<p>
-  user-data works!
-</p>
+<div *ngIf="!loading">
+  <div class="container">
+    <div class="col-md-2 col-xs-12 col-sm-4 text-center">
+      <div class="col-md-12 col-xs-12 col-sm-12 text-center basicData">
+        <img [src]="userProfile.profileImage" class="img-circle">
+        <br>
+        <h4>{{userProfile.fullName}}</h4>
+      </div>
+    </div>
+    <div class="col-md-10 col-xs-12 col-sm-8 text-center">
+      <ul class="nav nav-pills navbar-center">
+        <li><a data-toggle="pill" href="#review">รีวิว</a></li>
+        <li><a data-toggle="pill" href="#poll">โพล</a></li>
+      </ul>
+      <br>
+      <div class="tab-content">
+        <div id="bio" class="tab-pane in active ">
+          <h4>{{userProfile.bio}}</h4>
+        </div>
+        <div id="review" class="tab-pane fade">
+          <div class="container w3-animate-right bottomSpace">
+            <div class="text-center" *ngFor=" let data of userReviews ">
+              <a [routerLink]="['/reviews/content',data._id]">
+                <div class="col-md-12 col-xs-12 col-sm-12 review text-left bottomSpace " style="width: 100%; ">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h2>{{data.title}}</h2>
+                  </div>
+                  <div class="col-md-12 col-xs-12 col-sm-12 thumbnail">
+                    <img [src]="data.coverImage" style="width: 450px">
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="poll" class="tab-pane fade">
+          <div class="container w3-animate-right">
+            <div style="padding-bottom: 30px; " class="col-md-12 col-sm-12 col-xs-12 review" *ngFor="let poll of userPollProducts; let i = index">
+              <div style="background-color:white;">
+                <div style="padding-bottom: 30px;background-color:white;" class="col-md-12 col-sm-12 col-xs-12 " *ngFor="let image of poll.products.productImage; let i1 = index">
+                  <div>
+                    <div style="background-color:white;" class="col-md-3 col-sm-6 col-xs-12 text-center">
+                      <div class="thumnail" style="padding-top: 20px">
+                        <img [src]="image" class="img-thumbnail" style="height:100px">
+                      </div>
+                    </div>
+                    <div style="background-color:white;" class="col-md-9 col-sm-6 col-xs-12">
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-3 col-sm-12 col-xs-12 text-center">
+                          <h5>{{poll.products.productName[i1]}}</h5>
+                          <h6>{{poll.products.productScore[i1]}} คะแนน</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br/><br/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
