@@ -4,10 +4,11 @@
   </a>
 </div>
 <div>
-  <div class="container">
+  <div class="container w3-animate-right">
     <div style="padding-bottom: 30px; " class="col-md-12 col-sm-12 col-xs-12" *ngFor="let poll of pollProducts; let i = index">
       <div style="background-color:white;">
-        <h5 style="background-color:white; padding-top: 10px; padding-left:10px; padding-bottom:10px">สร้างโพลโดย {{poll.userName}}</h5>
+        <h5 style="background-color:white; padding-top: 10px; padding-left:10px; padding-bottom:10px">สร้างโพลโดย 
+          <a [routerLink]="['/user', poll.userID]">{{poll.userName}}</a></h5>
         <div style="padding-bottom: 30px;background-color:white;" class="col-md-12 col-sm-12 col-xs-12 " *ngFor="let image of poll.products.productImage; let i1 = index">
           <div>
             <div style="background-color:white;" class="col-md-3 col-sm-6 col-xs-12 text-center">
