@@ -1,0 +1,31 @@
+<div class="col-md-12 col-xs-12 col-sm-12">
+  <div *ngFor="let poll of polls; let i = index;">
+    <div *ngFor="let image of poll.products.productImage; let i1 = index;">
+      <div style="background-color:white;" class="col-md-3 col-sm-6 col-xs-12 text-center">
+        <div class="thumnail" style="padding-top: 20px">
+          <img [src]="image" class="img-thumbnail" style="height:100px">
+        </div>
+        <br/>
+        <br/>
+      </div>
+      <div style="background-color:white;" class="col-md-9 col-sm-6 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="col-md-9 col-sm-6 col-xs-6 text-left">
+            <p>{{poll.products.productName[i1]}}</p>
+          </div>
+          <div style="background-color:white;" class="col-md-3 col-sm-6 col-xs-6 text-left">
+            <h4>{{percentScore[i][i1][1]}} คะแนน</h4>
+          </div>
+        </div>
+        <div style="background-color:white;" class="col-md-12 col-sm-12 col-xs-12 text-left">
+          <div style="height: 10px" class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" [style.width]="percentScore[i][i1][0] + '%'">
+            </div>
+          </div>
+        </div>
+        <br/>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
