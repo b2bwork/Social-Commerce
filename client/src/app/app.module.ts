@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { NgUploaderModule } from 'ngx-uploader';
 import { routing } from './app.routing'
+import { HttpModule} from '@angular/http';
 
 
 import { ApolloModule } from 'apollo-angular';
@@ -26,6 +27,9 @@ import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent
 import { ReverseCommentPipe } from './Pipes/reverse-comment.pipe';
 import { ListpollproductComponent } from './Components/listpollproduct/listpollproduct.component';
 import { AddpollProductComponent } from './Components/addpoll-product/addpoll-product.component';
+import userProfile from './Components/user-data/user-data.component';
+import { UserReviewsComponent } from './Components/user-reviews/user-reviews.component';
+import { UserPollsComponent } from './Components/user-polls/user-polls.component'
 
 @NgModule({
   declarations: [
@@ -46,6 +50,9 @@ import { AddpollProductComponent } from './Components/addpoll-product/addpoll-pr
     ReverseCommentPipe,
     ListpollproductComponent,
     AddpollProductComponent,
+    userProfile,
+    UserReviewsComponent,
+    UserPollsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +62,8 @@ import { AddpollProductComponent } from './Components/addpoll-product/addpoll-pr
     FroalaEditorModule.forRoot(),
     FroalaViewModule.forRoot(),
     routing,
-    NgUploaderModule
+    NgUploaderModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { UserDataComponent } from './Components/user-data/user-data.component';
 import { AddpollProductComponent } from './Components/addpoll-product/addpoll-product.component';
 import { ListpollproductComponent } from './Components/listpollproduct/listpollproduct.component';
 import { ReviewcontentComponent } from './Components/reviewcontent/reviewcontent.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
     {path: 'reviews/content/:ReviewID' , component: ReviewcontentComponent},
     {path: 'pollproducts' , component: ListpollproductComponent},
     {path: 'addpoll' , component: AddpollProductComponent},
+    {path: 'user/:userID' , component: UserDataComponent}
 ]
 
 export const routing = RouterModule.forRoot(routes,{ useHash: true });
