@@ -1,70 +1,52 @@
-<div class="col-md-12 userAddressBG">
-  <div class="col-md-8">
-    <div class="form-inline" style="margin-top:20px">
+<div class="col-md-12 userAddressBG" style="padding-top: 20px">
+  <div class="col-md-12">
+    <div class="form-horizontal text-left">
       <div class="form-group">
-        <label>ชื่อ - นามสกุล <font style="color:#ff0000 ;font-size: 17px">*</font>
+        <label class="control-label col-sm-5">ชื่อ - นามสกุล <font style="color:#ff0000 ;font-size: 17px">*</font>
         </label>
-        <input type="text" 
-               class="form-control" 
-               style="margin-left:1px;width:450px"
-               [(ngModel)] = "userfullNameAddress">
-        <br>
-        <br>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" [(ngModel)]="userfullNameAddress">
+        </div>
       </div>
       <div class="form-group">
-        <label>ที่อยู่ส่งของ <font style="color:#ff0000 ;font-size: 17px">*</font>
+        <label class="control-label col-sm-5">ที่อยู่ส่งของ <font style="color:#ff0000 ;font-size: 17px">*</font>
         </label>
-        <input type="text" 
-               class="form-control" 
-               style="margin-left:20px;width:450px"
-               [(ngModel)] = "userAddress">
-        <br>
-        <br>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" [(ngModel)]="userAddress">
+        </div>
       </div>
       <div class="form-group">
-        <label>อำเภอ/เขต <font style="color:#ff0000 ;font-size: 17px">*</font>
+        <label class="control-label col-sm-5">อำเภอ/เขต <font style="color:#ff0000 ;font-size: 17px">*</font>
         </label>
-        <input type="text" 
-               class="form-control" 
-               style="margin-left:22px;width:150px"
-               [(ngModel)] = "userCity">
+        <div class="col-sm-7">
+          <input type="text" class="form-control" [(ngModel)]="userCity">
+        </div>
       </div>
-      <br>
-      <br>
       <div class="form-group">
-        <label>จังหวัด <font style="color:#ff0000 ;font-size: 17px">*</font>
+        <label class="control-label col-sm-5">จังหวัด <font style="color:#ff0000 ;font-size: 17px">*</font>
         </label>
-        <input type="text" 
-               class="form-control" 
-               style="margin-left:46px;width:150px"
-               [(ngModel)] = "userProvince">
+        <div class="col-sm-7">
+          <input type="text" class="form-control"[(ngModel)]="userProvince">
+        </div>
       </div>
-      <br>
-      <br>
       <div class="form-group">
-        <label>รหัสไปรษณีย์ <font style="color:#ff0000 ;font-size: 17px">*</font>
+        <label class="control-label col-sm-5">รหัสไปรษณีย์ <font style="color:#ff0000 ;font-size: 17px">*</font>
         </label>
-        <input type="text" 
-               class="form-control" 
-               style="margin-left:10px;width:150px"
-               [(ngModel)] = "userPostalCode">
+        <div class="col-sm-7">
+          <input type="text" class="form-control" [(ngModel)]="userPostalCode">
+        </div>
       </div>
-      <br>
-      <br>
       <div class="form-group">
-        <label>เบอร์โทรศัพท์
-        </label>
-        <input type="text" 
-               class="form-control" 
-               style="margin-left:22px;width:150px"
-               [(ngModel)] = "userPhoneNumber">
-
+        <label class="control-label col-sm-5">เบอร์โทรศัพท์</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" [(ngModel)]="userPhoneNumber">
+        </div>
       </div>
     </div>
     <br>
-    <button class="btn btn-lg" (click)="updataAddress()" >แก้ไขข้อมูล</button>
+    <button class="btn btn-lg" (click)="updataAddress()">แก้ไขข้อมูล</button>
     <h5>{{updated}}</h5>
     <br><br>
   </div>
-  
+
 </div>

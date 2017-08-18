@@ -35,7 +35,7 @@
   </div>
 </div>
 <div *ngIf="fakeComment.length > 0">
-  <div class="row" *ngFor="let comment of fakeComment | reverseComment">
+  <div class="row" *ngFor="let comment of fakeComment">
     <div class="col-md-12 col-xs-12 col-sm-12 listcomment w3-animate-right ">
       <div class="col-md-3 col-xs-12 col-sm-3 text-center thumbnail ">
         <img class="img-circle" style="width:15% ; height: 15%;" [src]="comment.userImage" /><br>

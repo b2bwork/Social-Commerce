@@ -1,1 +1,104 @@
-<button (click)="add()">ssss</button>
+<div *ngIf="!loading">
+    <div class="container">
+        <div class="content">
+            <div class="col-md-6 col-xs-12 col-sm-12 text-center">
+                <img class="productImage img-thumbnail" [src]="productData.images[0]">
+            </div>
+            <div class="col-md-6 col-xs-12 col-sm-12 text-center">
+                <h3>{{productData.name}}</h3>
+                <br>
+                <h3><span>&#3647;</span> {{productData.price}} บาท</h3>
+                <br><br>
+                <div class="form-horizontal text-center">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">จำนวน</label>
+                        <div class="col-sm-4">
+                            <select class="form-control col-sm-2" [(ngModel)]="productQuanity">
+                                <option [ngValue]="1">1</option>
+                                <option [ngValue]="2">2</option>
+                                <option [ngValue]="3">3</option>
+                                <option [ngValue]="4">4</option>
+                                <option [ngValue]="5">5</option>
+                                <option [ngValue]="6">6</option>
+                                <option [ngValue]="7">7</option>
+                                <option [ngValue]="8">8</option>
+                                <option [ngValue]="9">9</option>
+                                <option [ngValue]="10">10</option>
+                                <option [ngValue]="11">11</option>
+                                <option [ngValue]="12">12</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h2>บัตรเครดิต <i class="fa fa-credit-card fa-2x" aria-hidden="true"></i></h2>
+                    <div class="form-horizontal" style="padding-top: 20px">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">ชื่อ</label>
+                            <div class="col-sm-10">
+                                <input [(ngModel)]="name" type="text" class="form-control" id="email" placeholder="ชื่อ">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">รหัสบัตร</label>
+                            <div class="col-sm-10">
+                                <input [(ngModel)]="number" type="text" class="form-control" id="email" placeholder="รหัสบัตร">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">หมดอายุ</label>
+                            <div class="col-sm-4">
+                                <select class="form-control col-sm-2" [(ngModel)]="expiration_month">
+                                    <option [ngValue]="01" selected="selected">มกราคม (01)</option>
+                                    <option [ngValue]="02">กุมภาพันธ์ (02)</option>
+                                    <option [ngValue]="03">มีนาคม (03)</option>
+                                    <option [ngValue]="04">เมษายน (04)</option>
+                                    <option [ngValue]="05">พฤษภาคม (05)</option>
+                                    <option [ngValue]="06">มิถุนายน (06)</option>
+                                    <option [ngValue]="07">กรกฎาคม (07)</option>
+                                    <option [ngValue]="08">สิงหาคม (08)</option>
+                                    <option [ngValue]="09">กันยายน (09)</option>
+                                    <option [ngValue]="10">ตุลาคม (10)</option>
+                                    <option [ngValue]="11">พฤศจิกายน (11)</option>
+                                    <option [ngValue]="12">ธันวาคม (12)</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <select class="form-control" [(ngModel)]="expiration_year">
+                                    <option [ngValue]="2013" selected="selected">2013</option>
+                                    <option [ngValue]="2014">2014</option>
+                                    <option [ngValue]="2015">2015</option>
+                                    <option [ngValue]="2016">2016</option>
+                                    <option [ngValue]="2017">2017</option>
+                                    <option [ngValue]="2018">2018</option>
+                                    <option [ngValue]="2019">2019</option>
+                                    <option [ngValue]="2020">2020</option>
+                                    <option [ngValue]="2021">2021</option>
+                                    <option [ngValue]="2022">2022</option>
+                                    <option [ngValue]="2023">2023</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">CVC</label>
+                            <div class="col-sm-2">
+                                <input [(ngModel)]="security_code" type="text" class="form-control" id="email" placeholder="CVC">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h2>ที่อยู่ <i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></h2>
+                    <user-address></user-address>
+                </div>
+            </div>
+            <div class="col-md-12 col-xs-12 col-sm-12 content">
+                    <h2>รวมทั้งหมด <span>&#3647;</span> {{productData.price * productQuanity}} บาท</h2>
+                <button class="btn btn-lg" (click)="buy( productData._id,productData.name , productData.price)">ซื้อ</button>
+                <h4 style="color: red">{{error}}</h4>
+            </div>
+        </div>
+    </div>
+</div>

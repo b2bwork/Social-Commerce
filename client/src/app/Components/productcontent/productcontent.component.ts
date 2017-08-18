@@ -40,8 +40,6 @@ export class ProductcontentComponent implements OnInit {
       Data = data;
       let { productContent } = Data;
       this.product = productContent;
-
-      console.log(this.product)
     })
 
   }

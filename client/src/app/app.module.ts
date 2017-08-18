@@ -29,7 +29,8 @@ import { ListpollproductComponent } from './Components/listpollproduct/listpollp
 import { AddpollProductComponent } from './Components/addpoll-product/addpoll-product.component';
 import userProfile from './Components/user-data/user-data.component';
 import { UserReviewsComponent } from './Components/user-reviews/user-reviews.component';
-import { UserPollsComponent } from './Components/user-polls/user-polls.component'
+import { UserPollsComponent } from './Components/user-polls/user-polls.component';
+import { PaidsuccessComponent } from './Components/paidsuccess/paidsuccess.component'
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { UserPollsComponent } from './Components/user-polls/user-polls.component
     AddpollProductComponent,
     userProfile,
     UserReviewsComponent,
-    UserPollsComponent
+    UserPollsComponent,
+    PaidsuccessComponent
   ],
   imports: [
     BrowserModule,

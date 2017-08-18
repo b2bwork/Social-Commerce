@@ -1,0 +1,9 @@
+.container{
+    background-color: white;
+}
+.text-center{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: center;
+    margin: auto;
+}

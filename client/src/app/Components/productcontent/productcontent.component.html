@@ -13,7 +13,7 @@
       <br>
       <div class="thumbnail">
         <h3><span>&#3647;</span> {{product.price}} บาท</h3>
-        <button class="btn btn-lg">ซื้อ</button>
+        <a [routerLink]="['/pay',product._id]"><button class="btn btn-lg">ซื้อ</button></a>
       </div>
       <br><br>
     </div>
