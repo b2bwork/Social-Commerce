@@ -1,3 +1,4 @@
+import { UserTransactionHistoryComponent } from './Components/user-transaction-history/user-transaction-history.component';
 import { PaidsuccessComponent } from './Components/paidsuccess/paidsuccess.component';
 import { UserDataComponent } from './Components/user-data/user-data.component';
 import { AddpollProductComponent } from './Components/addpoll-product/addpoll-product.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
     {path: 'pollproducts' , component: ListpollproductComponent},
     {path: 'addpoll' , component: AddpollProductComponent},
     {path: 'user/:userID' , component: UserDataComponent},
-    {path: 'paidsuccess' , component: PaidsuccessComponent}
+    {path: 'paidsuccess' , component: PaidsuccessComponent},
+    {path: 'transactions' , component: UserTransactionHistoryComponent}
 ]
 
 export const routing = RouterModule.forRoot(routes,{ useHash: true });

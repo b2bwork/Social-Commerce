@@ -95,9 +95,14 @@
                 </div>
             </div>
             <div class="col-md-12 col-xs-12 col-sm-12 content">
+                <div class="col-md-6 col-sm-6 col-xs-6">
                     <h2>รวมทั้งหมด <span>&#3647;</span> {{productData.price * productQuanity}} บาท</h2>
-                <button class="btn btn-lg" (click)="buy( productData._id,productData.name , productData.price)">ซื้อ</button>
-                <h4 style="color: red">{{error}}</h4>
+                    <button class="btn btn-lg" (click)="buy( productData._id,productData.name , productData.price ,productData.images[0])">ซื้อ</button>
+                    <h4 style="color: red">{{error}}</h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6" *ngIf="sending == true">
+                    <img src="../../../assets/image/giphy.gif">
+                </div>
             </div>
         </div>
     </div>

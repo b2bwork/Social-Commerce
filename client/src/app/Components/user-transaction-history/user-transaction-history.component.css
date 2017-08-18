@@ -1,0 +1,9 @@
+.container{
+    background-color: white;
+    border-radius: 30px;
+}
+
+.list{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

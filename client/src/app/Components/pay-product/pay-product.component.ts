@@ -42,6 +42,7 @@ export class PayProductComponent implements OnInit {
   error: String = '';
   productQuanity: number = 0;
   resultPrice: number;
+  sending: Boolean = false
 
   constructor(private http: Http, private apollo: Apollo,private router: Router, private route: ActivatedRoute) {
     route.params.subscribe((param) => {
@@ -61,7 +62,8 @@ export class PayProductComponent implements OnInit {
 
   }
 
-  buy(productID: String, productName: String, productPrices: any) {
+  buy(productID: String, productName: String, productPrices: any , productImage:any) {
+    this.sending = true;
     this.resultPrice = this.productQuanity * productPrices;
     let header = new Headers();
     header.append("Authorization", 'Basic cGtleV90ZXN0XzU3dm84OGhyeHpjcHp1aHp6cmc6');
@@ -86,6 +88,7 @@ export class PayProductComponent implements OnInit {
               quantitys: this.productQuanity,
               productPrices: productPrices,
               price: this.resultPrice,
+              productImage: productImage
             },
             tokenID: tokenID.id,
             userID: localStorage.getItem('userID')

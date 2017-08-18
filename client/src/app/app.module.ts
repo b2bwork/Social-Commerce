@@ -30,7 +30,8 @@ import { AddpollProductComponent } from './Components/addpoll-product/addpoll-pr
 import userProfile from './Components/user-data/user-data.component';
 import { UserReviewsComponent } from './Components/user-reviews/user-reviews.component';
 import { UserPollsComponent } from './Components/user-polls/user-polls.component';
-import { PaidsuccessComponent } from './Components/paidsuccess/paidsuccess.component'
+import { PaidsuccessComponent } from './Components/paidsuccess/paidsuccess.component';
+import { UserTransactionHistoryComponent } from './Components/user-transaction-history/user-transaction-history.component'
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { PaidsuccessComponent } from './Components/paidsuccess/paidsuccess.compo
     userProfile,
     UserReviewsComponent,
     UserPollsComponent,
-    PaidsuccessComponent
+    PaidsuccessComponent,
+    UserTransactionHistoryComponent
   ],
   imports: [
     BrowserModule,

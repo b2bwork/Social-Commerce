@@ -1,0 +1,20 @@
+<div *ngIf="!loading">
+  <div class="container w3-animate-right text-center">
+    <h3 style="padding-top: 15px;">ประวัติการซื้อ</h3>
+    <div class="row list">
+      <div *ngFor="let history of listTransaction">
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail text-center">
+            <img [src]="history.productImage" style="width:100%;height: 150px">
+            <div class="caption">
+              <h3>{{history.productName}}</h3>
+              <p>จำนวน {{history.quantity}} ชิ้น</p>
+              <p>วันที่ {{history.createdTime}}</p>
+              <p>จำนวนเงิน {{history.price}} บาท</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
